@@ -4,44 +4,40 @@
 <!-- 
   ======================================================================
   RENATO LEÃO — PRIVATE ADVISORY & LUXURY REAL ESTATE
-  VERSÃO: 1.1.0 (UPDATE)
+  VERSÃO: 1.1.0 (RESTORED & OPTIMISED)
   DATA: 2026-09-22
   AUTOR: Renato Leão
   AMBIENTE ALVO: Vercel (Produção) / Domínio renatoleao.pt
-  
-  REGISTO DE ALTERAÇÕES (v1.1.0):
-  - Marca: Transição para Private Advisory independente (eliminação integral de menções e correspondência JLL)
-  - Inteligência de Mercado: Inserção de métricas de referência do segmento Prime no Porto (€/m², valorização, procura internacional e volume off-market)
-  - Contactos: Actualização de canal telefónico e WhatsApp para +351 916 306 106; supressão temporária de email
-  - Schema.org: Optimização para RealEstateAgent / Person independente
   ======================================================================
 -->
 <meta charset="UTF-8">
-<meta name="version" content="1.1.0-update">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Renato Leão — Curadoria &amp; Imobiliário Prime no Porto · Private Advisory</title>
-<meta name="description" content="Private Advisory em imobiliário de luxo no Porto, Costa Oceânica e Norte de Portugal. Consultoria estratégica independente, activos confidenciais off-market e representação fiduciária para vendedores, compradores e investidores.">
-<meta name="keywords" content="luxury real estate porto, imobiliario luxo porto, foz do douro properties, off market porto real estate, private advisory porto, costa oceanica gaia, renato leao imobiliario">
+<meta name="version" content="1.1.0-restored">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#141A20">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Renato Leão · Private Advisory — Imobiliário Prime no Porto &amp; Norte</title>
+<meta name="description" content="Private Advisory em imobiliário de luxo no Porto, Costa Oceânica de Gaia e Norte de Portugal. Representação fiduciária independente, aquisição personalizada e activos confidenciais off-market.">
+<meta name="keywords" content="luxury real estate porto, imobiliario luxo porto, foz do douro properties, off market porto real estate, costa oceanica gaia, renato leao private advisory">
 <meta name="author" content="Renato Leão · Private Advisory">
 <link rel="canonical" href="https://renatoleao.pt">
 
-<!-- Open Graph / Social Media -->
+<!-- Open Graph / Redes Sociais -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://renatoleao.pt">
-<meta property="og:title" content="Renato Leão — Curadoria &amp; Activos Prime no Porto · Private Advisory">
-<meta property="og:description" content="Private Advisory e gestão fiduciária de activos imobiliários confidenciais no Porto e Norte de Portugal para famílias e investidores HNW.">
+<meta property="og:title" content="Renato Leão · Private Advisory — Imobiliário Prime no Porto &amp; Norte">
+<meta property="og:description" content="Private Advisory e gestão fiduciária de activos residenciais prime e confidenciais no Porto e Costa Atlântica.">
 <meta property="og:image" content="https://renatoleao.pt/images/og-renato-leao.jpg">
 <meta property="og:locale" content="pt_PT">
 <meta property="og:locale:alternate" content="en_GB">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Renato Leão — Imobiliário Prime Porto · Private Advisory">
+<meta name="twitter:title" content="Renato Leão · Private Advisory — Imobiliário Prime Porto">
 <meta name="twitter:description" content="Consultoria imobiliária de luxo, activos off-market e private placement no Grande Porto e Costa Atlântica.">
 <meta name="twitter:image" content="https://renatoleao.pt/images/og-renato-leao.jpg">
 
 <!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23161D24'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='600' fill='%23B9793E' text-anchor='middle'%3ERL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%23141A20'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-weight='600' fill='%23BD8047' text-anchor='middle'%3ERL%3C/text%3E%3C/svg%3E">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +71,7 @@
         {"@type": "AdministrativeArea", "name": "Matosinhos Sul"},
         {"@type": "AdministrativeArea", "name": "Costa Oceânica de Vila Nova de Gaia"},
         {"@type": "AdministrativeArea", "name": "Frente Ribeirinha de Gaia"},
-        {"@type": "AdministrativeArea", "name": "Centro Histórico do Porto"}
+        {"@type": "AdministrativeArea", "name": "Baixa & Centro Histórico do Porto"}
       ],
       "sameAs": [
         "https://www.instagram.com/renatoleaopt",
@@ -87,8 +83,9 @@
       "@type": "Person",
       "@id": "https://renatoleao.pt/#person",
       "name": "Renato Leão",
-      "jobTitle": "Managing Partner & Senior Real Estate Advisor — Private Advisory",
+      "jobTitle": "Private Advisor & Consultor Imobiliário Prime",
       "url": "https://renatoleao.pt",
+      "telephone": "+351916306106",
       "sameAs": [
         "https://www.instagram.com/renatoleaopt",
         "https://linkedin.com/in/renatoleaopt",
@@ -115,7 +112,7 @@
     } catch(e){}
   };
 
-  /* Carregamento sequencial automático dos caminhos de imagem em produção */
+  /* Resolução resiliente da fotografia com suporte a Vercel e produção */
   window.handlePhotoFallback = function(imgEl){
     if(!imgEl) return;
     try {
@@ -179,7 +176,10 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+  }
   body{
     margin:0;
     background:var(--pedra);
@@ -188,6 +188,8 @@
     font-weight:400;
     -webkit-font-smoothing:antialiased;
     line-height:1.55;
+    overflow-x:hidden;
+    -webkit-tap-highlight-color:transparent;
   }
   img,svg{display:block;max-width:100%;}
   a{color:inherit;text-decoration:none;}
@@ -283,7 +285,6 @@
     .btn, a, button{ transition:none !important; }
   }
 
-  /* ---------- NAV ---------- */
   .nav{
     position:fixed; top:0; left:0; right:0; z-index:50;
     background:rgba(20,26,32,0.92);
@@ -303,14 +304,24 @@
     color:var(--marfim); background:var(--cobre); padding:3px 8px; border-radius:2px;
     font-weight:600;
   }
+  
   .nav__links{
-    display:none; gap:36px; font-size:13px; letter-spacing:0.05em; color:var(--marfim-80);
+    display:none; gap:26px; font-size:12px; letter-spacing:0.08em; color:var(--marfim-80);
     text-transform:uppercase; font-family:'IBM Plex Mono', monospace;
   }
-  @media(min-width:1024px){ .nav__links{ display:flex; } }
-  .nav__links a{ transition:color .2s var(--ease); }
+  @media(min-width:900px){ .nav__links{ display:flex; } }
+  @media(min-width:1100px){ .nav__links{ gap:34px; font-size:12.5px; } }
+  .nav__links a{ transition:color .2s var(--ease); position:relative; padding:4px 0; }
   .nav__links a:hover{ color:var(--cobre); }
-  .nav__right{ display:flex; align-items:center; gap:16px; }
+  .nav__links a::after{
+    content:''; position:absolute; bottom:0; left:0; width:0; height:1px;
+    background:var(--cobre); transition:width .25s var(--ease);
+  }
+  .nav__links a:hover::after{ width:100%; }
+
+  .nav__right{ display:flex; align-items:center; gap:12px; }
+  @media(min-width:768px){ .nav__right{ gap:16px; } }
+
   .lang-toggle{
     font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em;
     color:var(--marfim); border:1px solid var(--ardosia-line); padding:6px 12px; border-radius:2px;
@@ -320,43 +331,88 @@
   .nav__cta{ display:none; }
   @media(min-width:640px){ .nav__cta{ display:inline-flex; padding:10px 20px; font-size:12.5px; } }
 
-  /* ---------- HERO ---------- */
+  .nav__mobile-btn{
+    display:flex; flex-direction:column; justify-content:center; gap:5px;
+    width:36px; height:36px; padding:6px; cursor:pointer;
+    border:1px solid var(--ardosia-line); border-radius:var(--radius);
+  }
+  @media(min-width:900px){ .nav__mobile-btn{ display:none; } }
+  .nav__mobile-btn span{
+    display:block; width:100%; height:1.5px; background:var(--marfim);
+    transition:transform .25s var(--ease), opacity .25s var(--ease);
+  }
+  .nav__mobile-btn.is-active span:nth-child(1){ transform:translateY(6.5px) rotate(45deg); }
+  .nav__mobile-btn.is-active span:nth-child(2){ opacity:0; }
+  .nav__mobile-btn.is-active span:nth-child(3){ transform:translateY(-6.5px) rotate(-45deg); }
+
+  .nav__mobile-drawer{
+    display:none; position:fixed; top:73px; left:0; right:0;
+    background:rgba(13,18,22,0.98); backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--ardosia-line);
+    padding:24px 24px 32px;
+    z-index:49;
+    flex-direction:column; gap:18px;
+    animation:slideDown .25s var(--ease) forwards;
+  }
+  @keyframes slideDown{
+    from{ opacity:0; transform:translateY(-10px); }
+    to{ opacity:1; transform:translateY(0); }
+  }
+  .nav__mobile-drawer.is-open{ display:flex; }
+  @media(min-width:900px){ .nav__mobile-drawer{ display:none !important; } }
+  .nav__mobile-drawer a{
+    font-family:'IBM Plex Mono', monospace; font-size:13px; letter-spacing:0.12em;
+    color:var(--marfim); text-transform:uppercase; padding:10px 0;
+    border-bottom:1px solid var(--ardosia-line);
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav__mobile-drawer a:hover{ color:var(--cobre); }
+  .nav__mobile-drawer a::after{ content:'→'; color:var(--cobre); font-size:14px; }
+  .nav__mobile-cta{ margin-top:8px; width:100%; }
+
   .hero{
     background:linear-gradient(180deg, var(--ardosia-dark) 0%, var(--ardosia) 100%);
     color:var(--marfim);
-    padding:160px 0 0 0;
+    padding:108px 0 0 0;
     overflow:hidden;
     position:relative;
   }
+  @media(min-width:768px){ .hero{ padding:160px 0 0 0; } }
   .hero__inner{
-    max-width:var(--maxw); margin:0 auto; padding:0 24px 60px;
-    display:grid; gap:30px;
+    max-width:var(--maxw); margin:0 auto; padding:0 20px 48px;
+    display:grid; gap:24px;
   }
-  @media(min-width:768px){ .hero__inner{ padding:0 48px 80px; } }
+  @media(min-width:768px){ .hero__inner{ padding:0 48px 80px; gap:30px; } }
   .hero__eyebrow{ margin-bottom:4px; }
   .hero__title{
-    font-size:38px;
-    max-width:17ch;
+    font-size:clamp(30px, 8.5vw, 42px);
+    max-width:18ch;
+    overflow-wrap:break-word;
+    word-break:normal;
   }
-  @media(min-width:600px){ .hero__title{ font-size:56px; } }
+  @media(min-width:600px){ .hero__title{ font-size:54px; } }
   @media(min-width:1024px){ .hero__title{ font-size:68px; } }
   .hero__sub{
-    font-size:18px; line-height:1.65; color:var(--marfim-80); max-width:48ch;
-    margin-top:8px; font-weight:300;
+    font-size:16px; line-height:1.65; color:var(--marfim-80); max-width:48ch;
+    margin-top:4px; font-weight:300;
   }
-  .hero__actions{ display:flex; flex-wrap:wrap; gap:16px; margin-top:12px; }
+  @media(min-width:768px){ .hero__sub{ font-size:18px; margin-top:8px; } }
+  .hero__actions{ display:flex; flex-direction:column; gap:12px; margin-top:8px; width:100%; }
+  @media(min-width:480px){ .hero__actions{ flex-direction:row; flex-wrap:wrap; width:auto; } }
+  .hero__actions .btn{ width:100%; }
+  @media(min-width:480px){ .hero__actions .btn{ width:auto; } }
   .hero__meta{
-    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-    font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.06em;
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.04em;
     color:var(--marfim-50); margin-top:8px;
   }
+  @media(min-width:768px){ .hero__meta{ font-size:11.5px; gap:18px; letter-spacing:0.06em; } }
   .hero__meta-item{ display:flex; align-items:center; gap:8px; }
   .hero__meta .dot{ width:5px; height:5px; border-radius:50%; background:var(--cobre); flex:none; }
 
   .hero__art{ width:100%; line-height:0; }
   .hero__art svg{ width:100%; height:auto; display:block; }
 
-  /* ---------- PILLARS / METRICS ---------- */
   .pillars{ border-bottom:1px solid var(--linha); }
   .pillars__grid{
     display:grid; grid-template-columns:1fr; gap:40px 32px;
@@ -368,7 +424,6 @@
   .pillar__title{ font-size:16px; font-weight:600; }
   .pillar__desc{ font-size:14px; color:var(--tinta-70); line-height:1.6; }
 
-  /* ---------- SERVICES (Private Advisory) ---------- */
   .services__head{ display:flex; flex-direction:column; gap:16px; margin-bottom:64px; max-width:64ch; }
   .services__title{ font-size:34px; }
   @media(min-width:768px){ .services__title{ font-size:46px; } }
@@ -387,7 +442,6 @@
   .service__point{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--tinta-70); display:flex; align-items:center; gap:8px; }
   .service__point svg{ width:12px; height:12px; color:var(--cobre); flex:none; }
 
-  /* ---------- CONFIDENTIAL OFF-MARKET BOX ---------- */
   .offmarket{
     background:var(--ardosia-2); border:1px solid var(--ardosia-line);
     padding:44px 32px; margin-top:60px; border-radius:var(--radius);
@@ -403,7 +457,6 @@
     color:var(--cobre); text-transform:uppercase; margin-bottom:8px;
   }
 
-  /* ---------- AREAS (signature addresses) ---------- */
   .areas__head{ max-width:64ch; margin-bottom:64px; display:flex; flex-direction:column; gap:16px; }
   .areas__title{ font-size:34px; }
   @media(min-width:768px){ .areas__title{ font-size:46px; } }
@@ -425,38 +478,38 @@
   .area__name{ font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; }
   .area__text{ font-size:14px; color:var(--marfim-80); line-height:1.65; }
 
-  /* ---------- ABOUT ---------- */
   .about__grid{ display:grid; grid-template-columns:1fr; gap:48px; align-items:start; }
   @media(min-width:960px){ .about__grid{ grid-template-columns:0.85fr 1.15fr; gap:72px; } }
   .about__title{ font-size:34px; margin-bottom:24px; }
   @media(min-width:768px){ .about__title{ font-size:46px; } }
   .about__text{ font-size:16.5px; line-height:1.75; color:var(--tinta-70); margin-bottom:20px; }
-  
+
   .about__photo-container{
     position:relative; aspect-ratio:4/5;
     border:1px solid var(--ardosia-line);
-    background:radial-gradient(circle at 50% 28%, #1E2730 0%, #12181F 55%, #0A0E12 100%);
+    background:radial-gradient(circle at 48% 22%, #222B34 0%, #141A20 56%, #0A0E12 100%);
     overflow:hidden;
     border-radius:var(--radius);
     box-shadow:0 24px 48px -18px rgba(10,14,18,0.85);
   }
   .about__photo{
-    width:100%; height:100%; object-fit:cover; object-position:center 12%; display:block;
-    filter:contrast(1.12) brightness(0.97) saturate(1.04);
-    transform:scale(1.06);
+    width:100%; height:100%; object-fit:cover; object-position:48% 18%; display:block;
+    filter:contrast(1.15) brightness(0.96) saturate(1.05);
+    transform:scale(1.22);
     transition:transform .5s var(--ease);
   }
   .about__photo-container:hover .about__photo{
-    transform:scale(1.09);
+    transform:scale(1.25);
   }
   
-  /* Eliminação óptica do fundo da garagem com iluminação de estúdio */
+  /* Máscara óptica de estúdio para atenuação da garagem e realce do retrato */
   .about__photo-glow{
     position:absolute; inset:0; pointer-events:none; z-index:2;
     background:
-      radial-gradient(ellipse at 50% 22%, transparent 20%, rgba(13,18,22,0.52) 54%, rgba(13,18,22,0.95) 88%),
-      linear-gradient(to top, rgba(20,26,32,0.98) 0%, rgba(20,26,32,0.65) 24%, transparent 52%),
-      linear-gradient(to bottom, rgba(13,18,22,0.55) 0%, transparent 32%);
+      radial-gradient(ellipse at 48% 20%, transparent 22%, rgba(13,18,22,0.48) 54%, rgba(10,14,18,0.96) 84%),
+      linear-gradient(to top, rgba(20,26,32,0.98) 0%, rgba(20,26,32,0.70) 24%, transparent 52%),
+      linear-gradient(to bottom, rgba(10,14,18,0.65) 0%, transparent 30%),
+      linear-gradient(to left, rgba(13,18,22,0.82) 0%, transparent 40%);
   }
   .about__photo-placeholder{
     width:100%; height:100%; display:flex; flex-direction:column;
@@ -489,7 +542,6 @@
   .about__socials a:hover{ border-color:var(--cobre); color:var(--cobre); transform:translateY(-2px); }
   .about__socials svg{ width:16px; height:16px; }
 
-  /* ---------- PROCESS ---------- */
   .process__title{ font-size:34px; margin-bottom:56px; max-width:44ch; }
   @media(min-width:768px){ .process__title{ font-size:46px; } }
   .process__grid{ display:grid; grid-template-columns:1fr; gap:44px; }
@@ -500,7 +552,6 @@
   .step__title{ font-family:'Bodoni Moda',serif; font-size:21px; font-weight:600; margin:14px 0 10px; }
   .step__text{ font-size:14.5px; color:var(--tinta-70); line-height:1.65; }
 
-  /* ---------- PRIVATE INQUIRY / CONTACT ---------- */
   .contact{ text-align:left; }
   .contact__inner{ display:grid; grid-template-columns:1fr; gap:56px; }
   @media(min-width:960px){ .contact__inner{ grid-template-columns:1fr 1fr; gap:80px; align-items:start; } }
@@ -513,69 +564,151 @@
 
   .inquiry-form{
     background:var(--ardosia-2); border:1px solid var(--ardosia-line);
-    padding:36px 32px; border-radius:var(--radius); display:flex; flex-direction:column; gap:18px;
+    padding:26px 18px; border-radius:var(--radius); display:flex; flex-direction:column; gap:18px;
     position:relative;
   }
   @media(min-width:640px){ .inquiry-form{ padding:40px; } }
   .form-grid-2{ display:grid; grid-template-columns:1fr; gap:16px; }
   @media(min-width:600px){ .form-grid-2{ grid-template-columns:1fr 1fr; } }
   .form-group{ display:flex; flex-direction:column; gap:8px; }
-  .form-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.1em; color:var(--marfim-80); text-transform:uppercase; }
+  .form-label{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.08em; color:var(--marfim-80); text-transform:uppercase; }
   .form-input, .form-select, .form-textarea{
     background:var(--ardosia); border:1px solid var(--ardosia-line);
-    padding:13px 15px; border-radius:var(--radius); color:var(--marfim);
-    font-size:14.5px; transition:border-color .2s var(--ease); width:100%;
+    padding:14px 15px; border-radius:var(--radius); color:var(--marfim);
+    font-size:16px;
+    transition:border-color .2s var(--ease); width:100%;
+    -webkit-appearance:none;
+  }
+  @media(min-width:768px){
+    .form-input, .form-select, .form-textarea{ font-size:14.5px; padding:13px 15px; }
   }
   .form-input:focus, .form-select:focus, .form-textarea:focus{ border-color:var(--cobre); outline:none; }
   .form-select option{ background:var(--ardosia); color:var(--marfim); }
-  .form-radio-group{ display:grid; grid-template-columns:repeat(3, 1fr); gap:10px; }
+  .form-radio-group{ display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; }
   .form-radio-label{
-    border:1px solid var(--ardosia-line); padding:10px; font-size:12px; font-family:'IBM Plex Mono',monospace;
+    border:1px solid var(--ardosia-line); padding:12px 6px; font-size:11px; font-family:'IBM Plex Mono',monospace;
     text-align:center; border-radius:var(--radius); cursor:pointer; transition:all .2s var(--ease);
+    display:flex; align-items:center; justify-content:center;
   }
+  @media(min-width:400px){ .form-radio-label{ font-size:12px; padding:11px 8px; } }
   .form-radio-label:has(input:checked){ border-color:var(--cobre); background:var(--cobre-soft); color:var(--cobre); font-weight:600; }
   .form-radio-label input{ display:none; }
 
-  /* ---------- MODAL FEEDBACK ---------- */
   .feedback-modal{
     display:none; position:fixed; inset:0; z-index:100;
-    background:rgba(13,18,22,0.85); backdrop-filter:blur(8px);
-    align-items:center; justify-content:center; padding:20px;
+    background:rgba(13,18,22,0.88); backdrop-filter:blur(10px);
+    align-items:center; justify-content:center; padding:16px;
   }
   .feedback-modal.is-open{ display:flex; }
   .feedback-card{
     background:var(--ardosia-2); border:1px solid var(--cobre);
-    padding:40px; max-width:480px; width:100%; border-radius:var(--radius);
-    display:flex; flex-direction:column; gap:20px; text-align:center;
+    padding:30px 20px; max-width:480px; width:100%; border-radius:var(--radius);
+    display:flex; flex-direction:column; gap:18px; text-align:center;
   }
-  .feedback-card h3{ font-family:'Bodoni Moda',serif; font-size:26px; color:var(--marfim); }
-  .feedback-card p{ font-size:15px; color:var(--marfim-80); line-height:1.6; }
-
-  /* ---------- FOOTER ---------- */
-  .footer{ background:var(--ardosia-dark); color:var(--marfim-50); padding:56px 0 120px; border-top:1px solid var(--ardosia-line); }
-  @media(min-width:768px){ .footer{ padding:56px 0; } }
-  .footer__inner{ display:flex; flex-direction:column; gap:32px; }
-  @media(min-width:768px){ .footer__inner{ flex-direction:row; justify-content:space-between; align-items:flex-start; } }
-  .footer__brand{ font-family:'Bodoni Moda',serif; color:var(--marfim); font-size:18px; font-weight:600; }
-  .footer__legal{ font-size:12px; line-height:1.8; max-width:54ch; margin-top:12px; }
-  .footer__socials{ display:flex; gap:14px; }
-  .footer__socials a{ width:36px; height:36px; border:1px solid var(--ardosia-line); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all .2s var(--ease); }
-  .footer__socials a:hover{ border-color:var(--cobre); color:var(--cobre); }
-  .footer__socials svg{ width:15px; height:15px; }
-
-  /* ---------- STICKY MOBILE CTA ---------- */
+  @media(min-width:640px){ .feedback-card{ padding:40px; gap:20px; } }
+  .feedback-card h3{ font-family:'Bodoni Moda',serif; font-size:24px; color:var(--marfim); }
+  @media(min-width:640px){ .feedback-card h3{ font-size:26px; } }
+  .feedback-card p{ font-size:14px; color:var(--marfim-80); line-height:1.6; }
+  @media(min-width:640px){ .feedback-card p{ font-size:15px; } }
+  .feedback-card__actions{ display:flex; flex-direction:column; gap:10px; width:100%; }
+  @media(min-width:480px){ .feedback-card__actions{ flex-direction:row; justify-content:center; } }
+  .feedback-card__actions .btn{ width:100%; }
+  @media(min-width:480px){ .feedback-card__actions .btn{ width:auto; } }
+  
   .sticky-cta{
     position:fixed; left:0; right:0; bottom:0; z-index:60;
     display:flex; gap:1px; background:var(--ardosia-line);
     border-top:1px solid var(--ardosia-line);
+    padding-bottom:env(safe-area-inset-bottom, 0px);
+    touch-action:manipulation;
   }
   @media(min-width:768px){ .sticky-cta{ display:none; } }
   .sticky-cta a{
     flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
-    padding:16px 12px; font-size:13px; font-weight:600; background:var(--ardosia); color:var(--marfim);
+    padding:16px 10px; font-size:13px; font-weight:600; background:var(--ardosia); color:var(--marfim);
+    min-height:52px;
   }
   .sticky-cta a.is-primary{ background:var(--cobre); color:var(--marfim); }
-  .sticky-cta svg{ width:16px; height:16px; }
+  .sticky-cta svg{ width:16px; height:16px; flex:none; }
+
+  .footer{
+    background:var(--ardosia-dark);
+    color:var(--marfim-80);
+    border-top:1px solid var(--ardosia-line);
+    padding:64px 0 calc(94px + env(safe-area-inset-bottom, 0px));
+    position:relative;
+  }
+  @media(min-width:768px){ .footer{ padding:88px 0 44px; } }
+  .footer__grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:44px 32px;
+    margin-bottom:56px;
+  }
+  @media(min-width:640px){ .footer__grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:1024px){ .footer__grid{ grid-template-columns:1.5fr 1fr 1fr 1.1fr; gap:40px; } }
+  
+  .footer__brand-block{ display:flex; flex-direction:column; gap:16px; }
+  .footer__brand-header{ display:flex; align-items:center; gap:12px; }
+  .footer__brand-name{ font-family:'Bodoni Moda',serif; font-size:22px; font-weight:600; color:var(--marfim); }
+  .footer__desc{ font-size:14px; line-height:1.7; color:var(--marfim-80); max-width:38ch; }
+  
+  .footer__col{ display:flex; flex-direction:column; gap:16px; }
+  .footer__col-title{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--cobre);
+    font-weight:600;
+  }
+  .footer__links-list{ display:flex; flex-direction:column; gap:11px; }
+  .footer__link{
+    font-size:14px;
+    color:var(--marfim-80);
+    transition:color .2s var(--ease), transform .2s var(--ease);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .footer__link:hover{ color:var(--marfim); transform:translateX(3px); }
+  .footer__contact-item{ display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--marfim-80); line-height:1.5; }
+  .footer__contact-item svg{ width:16px; height:16px; color:var(--cobre); flex:none; margin-top:3px; }
+  .footer__contact-item a:hover{ color:var(--cobre); }
+
+  .footer__bottom{
+    border-top:1px solid var(--ardosia-line);
+    padding-top:32px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    align-items:flex-start;
+  }
+  @media(min-width:768px){
+    .footer__bottom{
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:center;
+    }
+  }
+  .footer__legal{ font-size:12.5px; line-height:1.7; color:var(--marfim-50); max-width:64ch; }
+  .footer__socials{ display:flex; align-items:center; gap:12px; }
+  .footer__social-link{
+    width:38px; height:38px;
+    border:1px solid var(--ardosia-line);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--marfim-80);
+    transition:all .25s var(--ease);
+    background:rgba(20,26,32,0.6);
+  }
+  .footer__social-link:hover{
+    border-color:var(--cobre);
+    color:var(--cobre);
+    transform:translateY(-2px);
+    background:rgba(189,128,71,0.1);
+  }
+  .footer__social-link svg{ width:16px; height:16px; }
 </style>
 </head>
 <body>
@@ -587,6 +720,8 @@
       <span class="nav__name">Renato Leão</span>
       <span class="nav__badge">PRIVATE</span>
     </a>
+    
+    <!-- Navegação Desktop -->
     <ul class="nav__links">
       <li><a href="#pilares" data-pt="Métricas Prime" data-en="Prime Metrics">Métricas Prime</a></li>
       <li><a href="#advisory" data-pt="Advisory" data-en="Advisory">Advisory</a></li>
@@ -595,23 +730,47 @@
       <li><a href="#processo" data-pt="Processo" data-en="Process">Processo</a></li>
       <li><a href="#contacto" data-pt="Contacto" data-en="Contact">Contacto</a></li>
     </ul>
+
     <div class="nav__right">
       <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
+      
       <a href="https://wa.me/351916306106" target="_blank" rel="noopener" class="btn btn--primary nav__cta js-whatsapp"
          data-msg-pt="Olá Renato, gostaria de solicitar uma consulta confidencial sobre activos prime no Porto."
          data-msg-en="Hello Renato, I would like to request a confidential consultation regarding prime assets in Porto.">
         <span data-pt="Private Desk" data-en="Private Desk">Private Desk</span>
       </a>
+
+      <!-- Botão Hambúrguer Móvel -->
+      <button class="nav__mobile-btn" id="mobileMenuBtn" type="button" aria-label="Abrir navegação" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </div>
+
+  <!-- Gaveta de Navegação Móvel -->
+  <div class="nav__mobile-drawer" id="mobileDrawer">
+    <a href="#pilares" class="js-nav-item" data-pt="Métricas Prime" data-en="Prime Metrics">Métricas Prime</a>
+    <a href="#advisory" class="js-nav-item" data-pt="Serviços Advisory" data-en="Advisory Services">Serviços Advisory</a>
+    <a href="#enderecos" class="js-nav-item" data-pt="Endereços Prime" data-en="Prime Addresses">Endereços Prime</a>
+    <a href="#sobre" class="js-nav-item" data-pt="Sobre Renato Leão" data-en="About Renato Leão">Sobre Renato Leão</a>
+    <a href="#processo" class="js-nav-item" data-pt="Metodologia Private Desk" data-en="Private Desk Process">Metodologia Private Desk</a>
+    <a href="#contacto" class="js-nav-item" data-pt="Contacto Confidencial" data-en="Confidential Inquiry">Contacto Confidencial</a>
+    <a href="https://wa.me/351916306106" target="_blank" rel="noopener" class="btn btn--primary nav__mobile-cta js-whatsapp"
+       data-msg-pt="Olá Renato, gostaria de solicitar uma consulta confidencial sobre activos prime no Porto."
+       data-msg-en="Hello Renato, I would like to request a confidential consultation regarding prime assets in Porto.">
+      <span data-pt="Conversa Directa no WhatsApp" data-en="Direct WhatsApp Briefing">Conversa Directa no WhatsApp</span>
+    </a>
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
 <header class="hero">
   <div class="hero__inner">
-    <p class="eyebrow hero__eyebrow" data-pt="Private Advisory · Curadoria &amp; Activos Prime · Porto &amp; Norte" data-en="Private Advisory · Curated Prime Assets · Porto &amp; Northern Portugal">Private Advisory · Curadoria &amp; Activos Prime · Porto &amp; Norte</p>
+    <p class="eyebrow hero__eyebrow" data-pt="Private Advisory · Porto &amp; Norte de Portugal" data-en="Private Advisory · Porto &amp; Northern Portugal">Private Advisory · Porto &amp; Norte de Portugal</p>
     <h1 class="display hero__title" data-pt="Curadoria imobiliária e activos de excepção no Porto." data-en="Curated real estate and exceptional assets in Porto.">Curadoria imobiliária e activos de excepção no Porto.</h1>
-    <p class="hero__sub" data-pt="Private Advisory em imobiliário de luxo. Representação discreta e independente para vendedores, compradores e investidores nos endereços mais exclusivos do Grande Porto, Costa Oceânica de Gaia e Norte de Portugal." data-en="Private Advisory in luxury real estate. Discreet, independent representation for sellers, discerning buyers, and global investors across the most prestigious addresses in Greater Porto, Gaia's Oceanic Coastline, and coastal Portugal.">Private Advisory em imobiliário de luxo. Representação discreta e independente para vendedores, compradores e investidores nos endereços mais exclusivos do Grande Porto, Costa Oceânica de Gaia e Norte de Portugal.</p>
+    <p class="hero__sub" data-pt="Private Advisory em imobiliário de luxo. Representação fiduciária e independente para vendedores, compradores e investidores nos endereços mais exclusivos do Grande Porto, Costa Oceânica de Gaia e Norte de Portugal." data-en="Private Advisory in luxury real estate. Discreet fiduciary representation for sellers, discerning buyers, and global investors across the most prestigious addresses in Greater Porto, Gaia's Oceanic Coastline, and Northern Portugal.">Private Advisory em imobiliário de luxo. Representação fiduciária e independente para vendedores, compradores e investidores nos endereços mais exclusivos do Grande Porto, Costa Oceânica de Gaia e Norte de Portugal.</p>
     
     <div class="hero__actions">
       <a href="#contacto" class="btn btn--primary">
@@ -628,18 +787,18 @@
 
     <div class="hero__meta">
       <div class="hero__meta-item"><span class="dot"></span><span data-pt="Vendedores · Compradores · Investidores" data-en="Sellers · Discerning Buyers · Investors">Vendedores · Compradores · Investidores</span></div>
-      <div class="hero__meta-item"><span class="dot"></span><span data-pt="Rede Global de Private Wealth &amp; Family Offices" data-en="Global Private Wealth &amp; Family Office Synergy">Rede Global de Private Wealth &amp; Family Offices</span></div>
+      <div class="hero__meta-item"><span class="dot"></span><span data-pt="Rede Fiduciária Internacional" data-en="International Fiduciary Network">Rede Fiduciária Internacional</span></div>
       <div class="hero__meta-item"><span class="dot"></span><span data-pt="Gestão Estrita de Sigilo &amp; Confidencialidade" data-en="Strict Confidentiality &amp; NDA Standards">Gestão Estrita de Sigilo &amp; Confidencialidade</span></div>
     </div>
   </div>
 
-  <!-- Architectural River Skyline Vector -->
+  <!-- Skyline Arquitectónico Ribeirinho em Vector -->
   <div class="hero__art" aria-hidden="true">
     <svg viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
       <defs>
         <linearGradient id="riverGrad" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="#1A272E"/>
-          <stop offset="100%" stop-color="#0D1317"/>
+          <stop offset="100%" stop-color="#0D1216"/>
         </linearGradient>
       </defs>
 
@@ -647,10 +806,10 @@
       <line x1="80" y1="140" x2="1120" y2="140" stroke="#BD8047" stroke-width="1.6" opacity="0.75"/>
       <line x1="180" y1="320" x2="1020" y2="320" stroke="#BD8047" stroke-width="1.2" opacity="0.6"/>
 
-      <!-- Bridge Arch -->
+      <!-- Arco da Ponte -->
       <path d="M180,360 Q600,160 1020,360" fill="none" stroke="#BD8047" stroke-width="2.2" opacity="0.85"/>
       
-      <!-- Architectural Pillars & City Silhouette -->
+      <!-- Pilares Arquitectónicos -->
       <g stroke="#BD8047" stroke-width="1" opacity="0.35">
         <line x1="300" y1="265" x2="300" y2="140"/>
         <line x1="420" y1="205" x2="420" y2="140"/>
@@ -660,7 +819,7 @@
         <line x1="900" y1="265" x2="900" y2="140"/>
       </g>
 
-      <!-- Ribeira Heritage Contours -->
+      <!-- Casario Histórico da Ribeira -->
       <g fill="none" stroke="#F8F6F0" stroke-width="1.4" opacity="0.75">
         <path d="M40,360 V290 L60,270 L80,290 V360 Z"/>
         <path d="M85,360 V260 L105,245 L125,260 V360 Z"/>
@@ -669,7 +828,7 @@
         <path d="M1065,360 V275 L1080,260 L1095,275 V360 Z"/>
       </g>
 
-      <!-- River Surface -->
+      <!-- Superfície do Rio Douro -->
       <rect x="0" y="360" width="1200" height="60" fill="url(#riverGrad)"/>
       <path d="M0,380 q40,-4 80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0 t80,0" stroke="#BD8047" stroke-width="1" fill="none" opacity="0.3"/>
     </svg>
@@ -681,30 +840,30 @@
 <section class="section pillars" id="pilares">
   <div class="container">
     <div class="services__head">
-      <p class="eyebrow" data-pt="Padrão de Excelência" data-en="Standard of Excellence">Padrão de Excelência</p>
-      <h2 class="display services__title" data-pt="Métricas que definem o segmento Prime no Porto." data-en="Metrics defining Porto's Prime segment.">Métricas que definem o segmento Prime no Porto.</h2>
+      <p class="eyebrow" data-pt="Métricas de Mercado Prime" data-en="Prime Market Metrics">Métricas de Mercado Prime</p>
+      <h2 class="display services__title" data-pt="Indicadores que definem o segmento de luxo no Porto." data-en="Indicators defining Porto's luxury segment.">Indicadores que definem o segmento de luxo no Porto.</h2>
     </div>
 
     <div class="pillars__grid">
       <div class="pillar reveal">
         <div class="pillar__num">€6.5K–€9.5K</div>
-        <div class="pillar__title" data-pt="Valor/m² nos Eixos Nobres" data-en="Price/sqm in Trophy Zones">Valor/m² nos Eixos Nobres</div>
-        <p class="pillar__desc" data-pt="Média transaccionada em moradias de assinatura e coberturas de autor na Foz Velha, Marechal Gomes da Costa, Nevogilde e primeira linha de mar." data-en="Transacted benchmarks for signature villas and penthouses in Foz Velha, Marechal Gomes da Costa, Nevogilde, and prime oceanfront.">Média transaccionada em moradias de assinatura e coberturas de autor na Foz Velha, Marechal Gomes da Costa, Nevogilde e primeira linha de mar.</p>
-      </div>
-      <div class="pillar reveal">
-        <div class="pillar__num">&gt;70%</div>
-        <div class="pillar__title" data-pt="Capital Internacional HNW" data-en="HNW International Buyers">Capital Internacional HNW</div>
-        <p class="pillar__desc" data-pt="Predominância de compradores e family offices da Europa Central, Reino Unido, Américas e Médio Oriente em tickets superiores a €1.5M." data-en="Dominance of private buyers and family offices from Central Europe, UK, the Americas, and Middle East above €1.5M.">Predominância de compradores e family offices da Europa Central, Reino Unido, Américas e Médio Oriente em tickets superiores a €1.5M.</p>
-      </div>
-      <div class="pillar reveal">
-        <div class="pillar__num">&gt;65%</div>
-        <div class="pillar__title" data-pt="Transacções Off-Market" data-en="Off-Market Volume">Transacções Off-Market</div>
-        <p class="pillar__desc" data-pt="A maioria dos imóveis de excepção no Porto e costa atlântica é negociada com absoluto sigilo, fora de portais públicos." data-en="Prime trophy properties in Porto and coastal areas are predominantly handled under strict NDAs, outside public real estate portals.">A maioria dos imóveis de excepção no Porto e costa atlântica é negociada com absoluto sigilo, fora de portais públicos.</p>
+        <div class="pillar__title" data-pt="Valor/m² nos Eixos Nobres" data-en="Price/sqm in Trophy Corridors">Valor/m² nos Eixos Nobres</div>
+        <p class="pillar__desc" data-pt="Valores de referência transaccionados em moradias de assinatura e penthouses de autor na Foz Velha, Marechal Gomes da Costa, Nevogilde e frentes atlânticas." data-en="Transacted benchmarks for signature villas and penthouses in Foz Velha, Marechal Gomes da Costa, Nevogilde, and prime oceanfront.">Valores de referência transaccionados em moradias de assinatura e penthouses de autor na Foz Velha, Marechal Gomes da Costa, Nevogilde e frentes atlânticas.</p>
       </div>
       <div class="pillar reveal">
         <div class="pillar__num">+14,8%</div>
-        <div class="pillar__title" data-pt="Valorização Sustentada" data-en="Sustained Appreciation">Valorização Sustentada</div>
-        <p class="pillar__desc" data-pt="Crescimento homólogo consistente em activos singulares, confirmando o Porto como um dos refúgios de preservação patrimonial mais procurados da Europa." data-en="Consistent year-on-year capital growth on trophy assets, solidifying Porto as a leading safe haven for wealth preservation in Europe.">Crescimento homólogo consistente em activos singulares, confirmando o Porto como um dos refúgios de preservação patrimonial mais procurados da Europa.</p>
+        <div class="pillar__title" data-pt="Valorização Sustentada" data-en="Sustained Capital Growth">Valorização Sustentada</div>
+        <p class="pillar__desc" data-pt="Crescimento homólogo sólido em activos singulares e palacetes, sustentado pela escassez estrutural de oferta nos códigos postais mais desejados." data-en="Resilient capital appreciation in trophy assets and historic estates, driven by structural supply scarcity across premier postcodes.">Crescimento homólogo sólido em activos singulares e palacetes, sustentado pela escassez estrutural de oferta nos códigos postais mais desejados.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar__num">&gt;70%</div>
+        <div class="pillar__title" data-pt="Capital Internacional HNW" data-en="International HNW Capital">Capital Internacional HNW</div>
+        <p class="pillar__desc" data-pt="Procura maioritária oriunda de investidores europeus, norte-americanos e family offices globais que elegem o Porto para consolidação de património." data-en="Predominant demand from European, North American, and global family offices choosing Porto for lifestyle and capital preservation.">Procura maioritária oriunda de investidores europeus, norte-americanos e family offices globais que elegem o Porto para consolidação de património.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar__num">&gt;65%</div>
+        <div class="pillar__title" data-pt="Transacções Off-Market" data-en="Confidential Off-Market Deals">Transacções Off-Market</div>
+        <p class="pillar__desc" data-pt="Percentagem expressiva de operações imobiliárias no segmento prime concretizadas com estrito sigilo fiduciário, sem qualquer exposição em portais." data-en="Significant share of prime residential transactions negotiated under strict fiduciary secrecy without public online exposure.">Percentagem expressiva de operações imobiliárias no segmento prime concretizadas com estrito sigilo fiduciário, sem qualquer exposição em portais.</p>
       </div>
     </div>
   </div>
@@ -722,7 +881,7 @@
       <div class="service reveal">
         <span class="service__tag" data-pt="01 — Para Compradores" data-en="01 — For Buyers">01 — Para Compradores</span>
         <h3 class="service__title" data-pt="Property Finding &amp; Mandato de Compra" data-en="Property Finding &amp; Buying Mandate">Property Finding &amp; Mandato de Compra</h3>
-        <p class="service__text" data-pt="Mapeamento exaustivo do mercado para compradores exigentes. Acesso privilegiado a moradias de assinatura, coberturas e palacetes não listados no mercado aberto, com rigorosa auditoria e negociação de topo." data-en="Exhaustive market scouting for discerning buyers. Privileged access to signature villas, penthouses, and historic estates not publicly listed, backed by thorough due diligence and negotiation.">Mapeamento exaustivo do mercado para compradores exigentes. Acesso privilegiado a moradias de assinatura, coberturas e palacetes não listados no mercado aberto, com rigorosa auditoria e negociação de topo.</p>
+        <p class="service__text" data-pt="Mapeamento exaustivo do mercado para compradores exigentes. Acesso privilegiado a moradias de assinatura, penthouses e palacetes não listados no mercado aberto, com rigorosa auditoria e negociação de topo." data-en="Exhaustive market scouting for discerning buyers. Privileged access to signature villas, penthouses, and historic estates not publicly listed, backed by thorough due diligence and negotiation.">Mapeamento exaustivo do mercado para compradores exigentes. Acesso privilegiado a moradias de assinatura, penthouses e palacetes não listados no mercado aberto, com rigorosa auditoria e negociação de topo.</p>
         <div class="service__points">
           <div class="service__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-pt="Acesso a carteira confidencial (Off-Market)" data-en="Access to confidential off-market inventory">Acesso a carteira confidencial (Off-Market)</span></div>
           <div class="service__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-pt="Análise comparativa de valor e liquidez" data-en="Comparative valuation and liquidity assessment">Análise comparativa de valor e liquidez</span></div>
@@ -735,7 +894,7 @@
         <p class="service__text" data-pt="Colocação de imóveis singulares junto de investidores qualificados. Abordagem à medida sem exposição vulgarizada na internet, preservando o valor e o prestígio do activo através de canais fiduciários dedicados." data-en="Positioning distinctive properties before vetted international buyers. A tailored approach without broad internet exposure, preserving asset value and prestige through dedicated fiduciary channels.">Colocação de imóveis singulares junto de investidores qualificados. Abordagem à medida sem exposição vulgarizada na internet, preservando o valor e o prestígio do activo através de canais fiduciários dedicados.</p>
         <div class="service__points">
           <div class="service__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-pt="Apresentação directa a High-Net-Worth Individuals" data-en="Direct pitching to High-Net-Worth Individuals">Apresentação directa a High-Net-Worth Individuals</span></div>
-          <div class="service__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-pt="Campanhas privadas de colocação fiduciária" data-en="Private bespoke fiduciary placement">Campanhas privadas de colocação fiduciária</span></div>
+          <div class="service__point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg><span data-pt="Campanhas privadas em redes fiduciárias fechadas" data-en="Private campaigns in vetted fiduciary networks">Campanhas privadas em redes fiduciárias fechadas</span></div>
         </div>
       </div>
 
@@ -750,7 +909,7 @@
       </div>
     </div>
 
-    <!-- Confidential Box -->
+    <!-- Módulo Confidencial Off-Market -->
     <div class="offmarket reveal">
       <div>
         <div class="offmarket__badge"><span class="dot"></span><span data-pt="Acesso Restrito" data-en="Restricted Access">Acesso Restrito</span></div>
@@ -828,18 +987,18 @@
 <section class="section" id="sobre">
   <div class="container">
     <div class="about__grid">
-      <!-- Profile Card & Container -->
+      <!-- Painel e Quadro de Retrato -->
       <div class="about__side reveal">
         <div class="about__photo-container" id="photoFrame">
           <img id="consultantPhoto"
                src="WhatsApp Image 2026-06-26 at 11.40.04_2.jpeg"
-               alt="Renato Leão · Private Advisory &amp; Imobiliário Prime no Porto"
+               alt="Renato Leão · Private Advisor em Imobiliário Prime no Porto"
                class="about__photo"
                onerror="handlePhotoFallback(this);"
                loading="eager">
           <div class="about__photo-glow"></div>
 
-          <!-- Fallback de assinatura executiva caso o ficheiro ainda não esteja no servidor -->
+          <!-- Silhueta executiva de reserva se o ficheiro estiver indisponível no servidor -->
           <div class="about__photo-placeholder" id="photoPlaceholder" style="display:none;">
             <svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="50" cy="38" r="22" stroke="#BD8047" stroke-width="1.8" fill="rgba(189,128,71,0.08)"/>
@@ -859,7 +1018,7 @@
         <div class="about__card">
           <div>
             <div class="about__card-name">Renato Leão</div>
-            <div class="about__card-role" data-pt="Managing Partner · Private Advisory" data-en="Managing Partner · Private Advisory">Managing Partner · Private Advisory</div>
+            <div class="about__card-role" data-pt="Private Advisor · Imobiliário Prime" data-en="Private Advisor · Prime Real Estate">Private Advisor · Imobiliário Prime</div>
           </div>
           <div class="about__card-list">
             <a href="tel:+351916306106">
@@ -887,9 +1046,9 @@
 
       <div class="reveal">
         <p class="eyebrow" style="margin-bottom:14px;" data-pt="Perfil &amp; Abordagem" data-en="Profile &amp; Advisory">Perfil &amp; Abordagem</p>
-        <h2 class="display about__title" data-pt="Rigor independente. Discrição absoluta." data-en="Independent rigour. Absolute discretion.">Rigor independente. Discrição absoluta.</h2>
+        <h2 class="display about__title" data-pt="Rigor global. Discrição absoluta." data-en="Global rigour. Absolute discretion.">Rigor global. Discrição absoluta.</h2>
         <p class="about__text" data-pt="No mercado imobiliário premium, a diferença entre uma transacção comum e uma operação bem-sucedida reside na precisão da informação e na capacidade de aceder ao que não está à vista." data-en="In the prime real estate arena, the distinction between a common transaction and a triumphant outcome rests upon precise intelligence and privileged access to unlisted assets.">No mercado imobiliário premium, a diferença entre uma transacção comum e uma operação bem-sucedida reside na precisão da informação e na capacidade de aceder ao que não está à vista.</p>
-        <p class="about__text" data-pt="Actuo no segmento de Private Advisory independente como interlocutor de confiança para compradores privados, investidores e famílias com património consolidado. O meu compromisso é proporcionar um serviço pautado pelo estrito sigilo fiduciário, análise profunda de dados de mercado e representação sem conflitos de interesse." data-en="Acting in bespoke independent Private Advisory, I serve as a trusted interlocutor for private buyers, capital allocators, and family offices. My mandate is to deliver advisory founded on strict fiduciary secrecy, deep market intelligence, and relentless representation without conflicts of interest.">Actuo no segmento de Private Advisory independente como interlocutor de confiança para compradores privados, investidores e famílias com património consolidado. O meu compromisso é proporcionar um serviço pautado pelo estrito sigilo fiduciário, análise profunda de dados de mercado e representação sem conflitos de interesse.</p>
+        <p class="about__text" data-pt="Como consultor fiduciário independente especializado em Private Advisory, actuo como interlocutor de confiança para compradores privados, investidores e famílias com património consolidado. O meu compromisso é proporcionar um serviço pautado pelo estrito sigilo, análise profunda de dados de mercado e representação sem conflitos de interesse." data-en="As an independent fiduciary advisor specializing in Private Advisory, I serve as a trusted interlocutor for private buyers, capital allocators, and family offices. My mandate is to deliver advisory founded on strict secrecy, deep market intelligence, and relentless representation free from conflicts of interest.">Como consultor fiduciário independente especializado em Private Advisory, actuo como interlocutor de confiança para compradores privados, investidores e famílias com património consolidado. O meu compromisso é proporcionar um serviço pautado pelo estrito sigilo, análise profunda de dados de mercado e representação sem conflitos de interesse.</p>
         <p class="about__text" data-pt="Seja para encontrar uma residência principal de excepção na Foz, estruturar a venda discreta de um palacete ou alocar capital em activos de rendimento no Porto, garanto acesso directo à rede mais qualificada de compradores e proprietários a nível nacional e internacional." data-en="Whether locating a signature private residence in Foz, orchestrating the confidential divestment of an estate, or deploying capital into yielding Porto assets, I unlock direct access to the most qualified private network of owners and investors globally.">Seja para encontrar uma residência principal de excepção na Foz, estruturar a venda discreta de um palacete ou alocar capital em activos de rendimento no Porto, garanto acesso directo à rede mais qualificada de compradores e proprietários a nível nacional e internacional.</p>
         
         <div style="margin-top:36px;">
@@ -960,7 +1119,7 @@
         </div>
       </div>
 
-      <!-- Confidential Qualification Form -->
+      <!-- Formulário de Qualificação Confidencial -->
       <form class="inquiry-form reveal" id="inquiryForm" onsubmit="event.preventDefault(); submitInquiry();">
         <div class="form-group">
           <label class="form-label" for="inq_type" data-pt="Objectivo do Contacto" data-en="Nature of Inquiry">Objectivo do Contacto</label>
@@ -995,6 +1154,11 @@
           <input type="text" class="form-input" id="inq_name" required placeholder="Ex: Dr. Alexandre Silva">
         </div>
 
+        <div class="form-group">
+          <label class="form-label" for="inq_email" data-pt="Correio Electrónico / Email" data-en="Email Address">Correio Electrónico / Email</label>
+          <input type="email" class="form-input" id="inq_email" required placeholder="alexandre.silva@exemplo.com">
+        </div>
+
         <div class="form-grid-2">
           <div class="form-group">
             <label class="form-label" for="inq_phone" data-pt="Telefone (com indicativo)" data-en="Phone (with country code)">Telefone (com indicativo)</label>
@@ -1025,7 +1189,7 @@
   <div class="feedback-card">
     <h3 id="modalTitle" data-pt="Solicitação Formatada" data-en="Inquiry Prepared">Solicitação Formatada</h3>
     <p id="modalDesc" data-pt="A sua solicitação foi estruturada para o canal confidencial de Renato Leão. Será reencaminhado de imediato para contacto directo e seguro." data-en="Your inquiry has been prepared for Renato Leão's private desk. You will be redirected for immediate confidential review.">A sua solicitação foi estruturada para o canal confidencial de Renato Leão. Será reencaminhado de imediato para contacto directo e seguro.</p>
-    <div style="display:flex; gap:12px; justify-content:center;">
+    <div class="feedback-card__actions">
       <button type="button" class="btn btn--primary" onclick="proceedToChannel();">
         <span data-pt="Prosseguir para WhatsApp" data-en="Proceed to WhatsApp">Prosseguir para WhatsApp</span>
       </button>
@@ -1038,25 +1202,92 @@
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="container footer__inner">
-    <div>
-      <div class="footer__brand">Renato Leão · Private Advisory</div>
-      <p class="footer__legal" data-pt="Private Advisory &amp; Luxury Real Estate — Porto &amp; Norte de Portugal. Esta página constitui uma apresentação profissional executiva e independente no âmbito da representação e assessoria fiduciária de clientes." data-en="Private Advisory &amp; Luxury Real Estate — Porto &amp; Northern Portugal. This web profile represents an executive presentation for client advisory and fiduciary representation.">Private Advisory &amp; Luxury Real Estate — Porto &amp; Norte de Portugal. Esta página constitui uma apresentação profissional executiva e independente no âmbito da representação e assessoria fiduciária de clientes.</p>
-      <p class="footer__legal" style="margin-top:10px;">© 2026 Renato Leão.<span data-pt=" Todos os direitos reservados. Rigor, Discrição &amp; Eficácia." data-en=" All rights reserved. Discretion, Rigour &amp; Performance."> Todos os direitos reservados. Rigor, Discrição &amp; Eficácia.</span></p>
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Coluna 1: Marca & Síntese Fiduciária -->
+      <div class="footer__brand-block">
+        <div class="footer__brand-header">
+          <span class="footer__brand-name">Renato Leão</span>
+          <span class="nav__badge">PRIVATE</span>
+        </div>
+        <p class="footer__desc" data-pt="Private Advisory e curadoria de activos residenciais de excepção no Porto, Costa Oceânica de Gaia e Norte de Portugal. Representação fiduciária para vendedores, compradores e investidores." data-en="Private Advisory and curation of exceptional residential assets in Porto, Gaia's Oceanic Coast, and Northern Portugal. Fiduciary representation for sellers, discerning buyers, and investors.">Private Advisory e curadoria de activos residenciais de excepção no Porto, Costa Oceânica de Gaia e Norte de Portugal. Representação fiduciária para vendedores, compradores e investidores.</p>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--cobre); letter-spacing:0.08em;" data-pt="PORTO · FOZ · GAIA COSTA · NORTE" data-en="PORTO · FOZ · GAIA COAST · NORTH">PORTO · FOZ · GAIA COSTA · NORTE</div>
+      </div>
+
+      <!-- Coluna 2: Navegação Rápida -->
+      <div class="footer__col">
+        <div class="footer__col-title" data-pt="Navegação" data-en="Navigation">Navegação</div>
+        <ul class="footer__links-list">
+          <li><a href="#pilares" class="footer__link" data-pt="Métricas Prime" data-en="Prime Metrics">Métricas Prime</a></li>
+          <li><a href="#advisory" class="footer__link" data-pt="Serviços Advisory" data-en="Advisory Services">Serviços Advisory</a></li>
+          <li><a href="#enderecos" class="footer__link" data-pt="Endereços Prime" data-en="Prime Addresses">Endereços Prime</a></li>
+          <li><a href="#sobre" class="footer__link" data-pt="Perfil &amp; Abordagem" data-en="Profile &amp; Approach">Perfil &amp; Abordagem</a></li>
+          <li><a href="#processo" class="footer__link" data-pt="Metodologia" data-en="Methodology">Metodologia</a></li>
+          <li><a href="#contacto" class="footer__link" data-pt="Contacto Privado" data-en="Private Inquiry">Contacto Privado</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Endereços Nobres -->
+      <div class="footer__col">
+        <div class="footer__col-title" data-pt="Territórios Prime" data-en="Prime Territories">Territórios Prime</div>
+        <ul class="footer__links-list">
+          <li><a href="#enderecos" class="footer__link" data-pt="Foz do Douro &amp; Nevogilde" data-en="Foz do Douro &amp; Nevogilde">Foz do Douro &amp; Nevogilde</a></li>
+          <li><a href="#enderecos" class="footer__link" data-pt="Avenida da Boavista" data-en="Avenida da Boavista">Avenida da Boavista</a></li>
+          <li><a href="#enderecos" class="footer__link" data-pt="Costa Oceânica de Gaia" data-en="Gaia Oceanic Coast">Costa Oceânica de Gaia</a></li>
+          <li><a href="#enderecos" class="footer__link" data-pt="Frente Ribeirinha do Douro" data-en="Douro Riverfront">Frente Ribeirinha do Douro</a></li>
+          <li><a href="#enderecos" class="footer__link" data-pt="Matosinhos Sul" data-en="Matosinhos Sul">Matosinhos Sul</a></li>
+          <li><a href="#enderecos" class="footer__link" data-pt="Baixa &amp; Centro Histórico" data-en="Downtown &amp; Heritage Centre">Baixa &amp; Centro Histórico</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Private Desk & Atendimento -->
+      <div class="footer__col">
+        <div class="footer__col-title" data-pt="Private Desk" data-en="Private Desk">Private Desk</div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2C9.5 21 3 14.5 3 6a2 2 0 0 1 1-2z"/></svg>
+          <div>
+            <div style="font-size:11px; font-family:'IBM Plex Mono',monospace; color:var(--cobre); letter-spacing:0.06em;" data-pt="Linha Directa" data-en="Direct Line">Linha Directa</div>
+            <a href="tel:+351916306106" style="font-weight:600; color:var(--marfim);">+351 916 306 106</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7M20 4l-5.2 5.2M9 12a3 3 0 0 0 4 2.8M9 12a3 3 0 0 1 1-2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <div style="font-size:11px; font-family:'IBM Plex Mono',monospace; color:var(--cobre); letter-spacing:0.06em;">WhatsApp Desk</div>
+            <a href="https://wa.me/351916306106" target="_blank" rel="noopener" style="color:var(--marfim);">Direct Channel</a>
+          </div>
+        </div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+          <div>
+            <div style="font-size:11px; font-family:'IBM Plex Mono',monospace; color:var(--cobre); letter-spacing:0.06em;" data-pt="Presença" data-en="Presence">Presença</div>
+            <span data-pt="Porto · Portugal" data-en="Porto · Portugal">Porto · Portugal</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer__socials">
-      <a href="https://linkedin.com/in/renatoleaopt" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4.5a2 2 0 0 1 4 0V17M12 12.5V17"/></svg>
-      </a>
-      <a href="https://www.instagram.com/renatoleaopt" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-      </a>
-      <a href="https://youtube.com/@renatoleaopt" target="_blank" rel="noopener" aria-label="YouTube">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a href="https://wa.me/351916306106" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7M20 4l-5.2 5.2M9 12a3 3 0 0 0 4 2.8M9 12a3 3 0 0 1 1-2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+
+    <!-- Barra Inferior: Direitos, Termos & Social Icons -->
+    <div class="footer__bottom">
+      <div class="footer__legal">
+        <p data-pt="Private Advisory &amp; Luxury Real Estate — Porto &amp; Norte de Portugal. Esta página constitui uma apresentação profissional executiva e independente no âmbito da representação e assessoria fiduciária de clientes no mercado imobiliário prime." data-en="Private Advisory &amp; Luxury Real Estate — Porto &amp; Northern Portugal. This web presentation serves as an executive independent showcase for client representation and fiduciary advisory within prime real estate.">Private Advisory &amp; Luxury Real Estate — Porto &amp; Norte de Portugal. Esta página constitui uma apresentação profissional executiva e independente no âmbito da representação e assessoria fiduciária de clientes no mercado imobiliário prime.</p>
+        <p style="margin-top:8px;">© 2026 Renato Leão.<span data-pt=" Todos os direitos reservados. Rigor, Discrição &amp; Eficácia." data-en=" All rights reserved. Discretion, Rigour &amp; Performance."> Todos os direitos reservados. Rigor, Discrição &amp; Eficácia.</span></p>
+      </div>
+
+      <div class="footer__socials">
+        <a href="https://linkedin.com/in/renatoleaopt" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4.5a2 2 0 0 1 4 0V17M12 12.5V17"/></svg>
+        </a>
+        <a href="https://www.instagram.com/renatoleaopt" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a href="https://youtube.com/@renatoleaopt" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 10l4 2-4 2z" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/351916306106" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7M20 4l-5.2 5.2M9 12a3 3 0 0 0 4 2.8M9 12a3 3 0 0 1 1-2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
@@ -1071,7 +1302,7 @@
      data-msg-pt="Olá Renato, gostaria de solicitar uma consulta privada sobre activos prime no Porto."
      data-msg-en="Hello Renato, I would like to request a private consultation regarding prime assets in Porto.">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 1 1-3.6-6.7M20 4l-5.2 5.2M9 12a3 3 0 0 0 4 2.8M9 12a3 3 0 0 1 1-2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <span data-pt="WhatsApp Private" data-en="WhatsApp Private">WhatsApp Private</span>
+    <span data-pt="WhatsApp Desk" data-en="WhatsApp Desk">WhatsApp Desk</span>
   </a>
 </div>
 
@@ -1111,7 +1342,27 @@
 
     updateWhatsapp();
 
-    // Reveal on scroll
+    // Gestão da Navegação Móvel (Gaveta e Botão Hambúrguer)
+    var mobileBtn = document.getElementById('mobileMenuBtn');
+    var mobileDrawer = document.getElementById('mobileDrawer');
+
+    if(mobileBtn && mobileDrawer){
+      mobileBtn.addEventListener('click', function(){
+        var isOpen = mobileDrawer.classList.toggle('is-open');
+        mobileBtn.classList.toggle('is-active', isOpen);
+        mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      document.querySelectorAll('.js-nav-item').forEach(function(item){
+        item.addEventListener('click', function(){
+          mobileDrawer.classList.remove('is-open');
+          mobileBtn.classList.remove('is-active');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Animação suave ao descer a página (Reveal on scroll)
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(!reduceMotion && 'IntersectionObserver' in window){
       var io = new IntersectionObserver(function(entries){
@@ -1127,12 +1378,13 @@
       document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
     }
 
-    // Confidential Inquiry Dispatcher
+    // Processamento e formatação da consulta confidencial
     window.submitInquiry = function(){
       var type = document.getElementById('inq_type').value;
       var bracketEl = document.querySelector('input[name="bracket"]:checked');
       var bracket = bracketEl ? bracketEl.value : '1M-3M';
       var name = document.getElementById('inq_name').value;
+      var email = document.getElementById('inq_email').value;
       var phone = document.getElementById('inq_phone').value;
       var country = document.getElementById('inq_country').value;
       var notes = document.getElementById('inq_notes').value;
@@ -1141,6 +1393,7 @@
                  "- Perfil / Objectivo: " + type + "\n" +
                  "- Volume / Valor: " + bracket + "\n" +
                  "- Nome: " + name + "\n" +
+                 "- Email: " + email + "\n" +
                  "- Telefone: " + phone + "\n" +
                  "- País: " + country + "\n" +
                  "- Notas / Especificações: " + (notes ? notes : "N/A");
